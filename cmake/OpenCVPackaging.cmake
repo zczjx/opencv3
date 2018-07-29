@@ -112,7 +112,7 @@ set(STD_OPENCV_DEV libopencv-dev)
 
 foreach(module calib3d core cudaarithm cudabgsegm cudacodec cudafeatures2d cudafilters
                cudaimgproc cudalegacy cudaobjdetect cudaoptflow cudastereo cudawarping
-               cudev features2d flann hal highgui imgcodecs imgproc ml objdetect ocl
+               cudev face features2d flann hal highgui imgcodecs imgproc ml objdetect ocl
                photo shape stitching superres ts video videoio videostab viz)
   if(HAVE_opencv_${module})
     list(APPEND STD_OPENCV_LIBS "libopencv-${module}3.0")
@@ -165,3 +165,4 @@ endif(NOT OPENCV_CUSTOM_PACKAGE_INFO)
 include(CPack)
 
 ENDif(EXISTS "${CMAKE_ROOT}/Modules/CPack.cmake")
+
